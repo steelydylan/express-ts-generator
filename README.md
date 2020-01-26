@@ -39,3 +39,8 @@ export const Get: SomeController.Get = async (
 ## You can see how useful it is!!
 
 ![](./screenshot.png)
+
+
+## Demo Repository
+
+[Github](https://github.com/steelydylan/express-ts-generator-test)
