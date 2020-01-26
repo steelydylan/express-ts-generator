@@ -47,11 +47,11 @@ declare namespace Paths {
         namespace Post {
             export interface RequestBody {
                 /**
-                 * お酒の種別
+                 * 音楽の種別
                  */
-                category?: "ビール" | "日本酒" | "ワイン" | "ウイスキー";
+                category?: "トランス" | "ロック" | "EDM" | "レゲエ" | "ミックスチャー";
                 /**
-                 * 銘柄
+                 * レコード名
                  */
                 name?: string;
             }

@@ -24,7 +24,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/music'
     post:
-      summary: お酒を新規登録します
+      summary: 音楽を新規登録します
       requestBody:
         required: true
         content:
@@ -33,15 +33,16 @@ paths:
               properties:
                 category:
                   type: string
-                  description: お酒の種別
+                  description: 音楽の種別
                   enum:
-                    - ビール
-                    - 日本酒
-                    - ワイン
-                    - ウイスキー
+                    - トランス
+                    - ロック
+                    - EDM
+                    - レゲエ
+                    - ミックスチャー
                 name:
                   type: string
-                  description: 銘柄
+                  description: レコード名
       security:
         - OAuth2:
           - write
