@@ -106,12 +106,3 @@ components:
         message:
           type: string
           example: エラー内容
-  securitySchemes:
-    OAuth2:
-      type: oauth2
-      description: 
-      flows:
-        authorizationCode:
-          scopes:
-            write: 登録・更新
-            read: 取得
