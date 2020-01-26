@@ -1,5 +1,5 @@
 {
-  "name": "express-api-generator",
+  "name": "express-ts-generator",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
@@ -12,7 +12,7 @@
   },
   "types": "./api.ts",
   "bin": {
-    "api-gen": "./bin/index.js"
+    "apigen": "./bin/index.js"
   },
   "keywords": [],
   "author": "",

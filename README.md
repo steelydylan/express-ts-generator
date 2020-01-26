@@ -6,11 +6,11 @@ It strongly support type definition to express request and response model in acc
 ## Install
 
 ```sh
-$ npm install dtsgenerator express-api-generator --save
+$ npm install dtsgenerator express-ts-generator --save
 ```
 
 ```sh
-$ dtsgen openapi/openapi.yaml -o ./src/@types/openapi.d.ts && api-gen -s ./src/@types/openapi.d.ts -d ./src/@types/api.d.ts
+$ dtsgen openapi/openapi.yaml -o ./src/@types/openapi.d.ts && apigen -s ./src/@types/openapi.d.ts -d ./src/@types/api.d.ts
 ```
 
 ## Usage
