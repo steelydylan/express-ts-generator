@@ -9,13 +9,15 @@ It strongly support type definition for express request and response model in ac
 $ npm install dtsgenerator express-ts-generator --save
 ```
 
+## Generate definition file
+
 ```sh
-$ npx dtsgen openapi/openapi.yaml -o ./src/@types/openapi.d.ts && npx apigen -s ./src/@types/openapi.d.ts -d ./src/@types/api.d.ts
+$ npx dtsgen openapi/openapi.yaml -o ./src/@types/openapi.d.ts && npx apigen -s ./src/@types/openapi.d.ts -d ./src/@types/api.ts
 ```
 
 ## Usage
 
-register it's types to tsconfig.json
+register types to tsconfig.json
 
 ```json
 {
@@ -27,6 +29,7 @@ register it's types to tsconfig.json
 }
 ```
 
+use generated file
 
 ```ts
 import { SomeController } from './types/api';
