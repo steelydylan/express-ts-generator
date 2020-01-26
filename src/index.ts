@@ -83,7 +83,9 @@ module.exports = async (config: Config) => {
   let render = `/* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Controller } from 'express-api-generator';
+
+import { Controller } from 'express-ts-generator';
+
 `;
   render += items.join('');
   fs.writeFile(resolve(config.dist), render, err => {
