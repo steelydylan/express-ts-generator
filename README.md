@@ -1,4 +1,4 @@
-# express-api-generator
+# express-ts-generator
 
 It strongly support type definition to express request and response model in accordance with Open API
 
