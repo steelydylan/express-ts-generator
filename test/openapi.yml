@@ -1,0 +1,117 @@
+openapi: 3.0.2
+info:
+  title: Music Store API
+  description: |
+    # 前書き
+    これはexpress-api-generatorを説明するためのテストAPIです。
+  version: 1.0.0
+externalDocs:
+  description: ソースコード
+  url: 'https://github.com/steelydylan/express-api-generator/'
+servers:
+  - url: http://example.com/v1
+paths:
+  /musics:
+    get:
+      summary: 音楽一覧を取得します
+      responses:
+        200:
+          description: 成功時のレスポンス
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/music'
+    post:
+      summary: お酒を新規登録します
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                category:
+                  type: string
+                  description: お酒の種別
+                  enum:
+                    - ビール
+                    - 日本酒
+                    - ワイン
+                    - ウイスキー
+                name:
+                  type: string
+                  description: 銘柄
+      security:
+        - OAuth2:
+          - write
+      responses:
+        201:
+          description: リクエストに成功し、お酒が作成された場合のレスポンス
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/music'
+        400:
+          description: ペイロードが不正だった場合のレスポンス
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/errorMessage'
+        401:
+          description: 認証に失敗した場合のレスポンス
+  /music/{musicId}:
+    get:
+      summary: 指定されたidの音楽を取得します
+      parameters:
+      - name: musicId
+        in: path
+        description: 取得したい音楽のID
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: 成功時のレスポンス
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/music'
+components:
+  schemas:
+    music:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        category:
+          type: string
+          description: 音楽の種別
+          example: ミックスチャー
+          enum:
+            - トランス
+            - ロック
+            - EDM
+            - レゲエ
+            - ミックスチャー
+        name:
+          type: string
+          description: レコード名
+          example: 白日
+    errorMessage:
+      type: object
+      properties:
+        message:
+          type: string
+          example: エラー内容
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: 
+      flows:
+        authorizationCode:
+          scopes:
+            write: 登録・更新
+            read: 取得
