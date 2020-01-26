@@ -23,7 +23,7 @@ register types to tsconfig.json
 {
   "compilerOptions": {
     "types": [
-      "express-api-generator"
+      "express-ts-generator"
     ]
   }
 }
