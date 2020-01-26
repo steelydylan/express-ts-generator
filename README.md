@@ -10,7 +10,7 @@ $ npm install dtsgenerator express-ts-generator --save
 ```
 
 ```sh
-$ dtsgen openapi/openapi.yaml -o ./src/@types/openapi.d.ts && apigen -s ./src/@types/openapi.d.ts -d ./src/@types/api.d.ts
+$ npx dtsgen openapi/openapi.yaml -o ./src/@types/openapi.d.ts && npx apigen -s ./src/@types/openapi.d.ts -d ./src/@types/api.d.ts
 ```
 
 ## Usage
