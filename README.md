@@ -21,7 +21,7 @@ generated file will look like this
 /* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Controller } from 'express-api-generator';
+import { Controller } from 'express-ts-generator';
 
 export namespace Music$MusicIdController {
   export type Get = Controller<{

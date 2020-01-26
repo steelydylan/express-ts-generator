@@ -97,7 +97,7 @@ module.exports = function (config) { return __awaiter(void 0, void 0, void 0, fu
                     render += '}\n';
                     return render;
                 });
-                render = "/* eslint-disable @typescript-eslint/no-namespace */\n/* eslint-disable @typescript-eslint/no-explicit-any */\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\nimport { Controller } from 'express-api-generator';\n";
+                render = "/* eslint-disable @typescript-eslint/no-namespace */\n/* eslint-disable @typescript-eslint/no-explicit-any */\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\n\nimport { Controller } from 'express-ts-generator';\n\n";
                 render += items.join('');
                 fs.writeFile(path_1.resolve(config.dist), render, function (err) {
                     console.log(err);
