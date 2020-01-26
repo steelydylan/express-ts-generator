@@ -1,6 +1,6 @@
 # express-ts-generator
 
-It strongly support type definition to express request and response model in accordance with Open API
+It strongly support type definition for express request and response model in accordance with Open API
 
 
 ## Install
