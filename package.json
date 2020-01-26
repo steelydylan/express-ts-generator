@@ -8,7 +8,8 @@
     "dtsgen": "dtsgen ./test/openapi.yml -o ./test/openapi.d.ts",
     "apigen": "node ./bin/index.js -s ./test/openapi.d.ts -d ./test/expressapi.ts",
     "gen": "npm run dtsgen && npm run apigen",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": ""
   },
   "types": "./api.ts",
   "bin": {
@@ -19,7 +20,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^13.5.0",
-    "dtsgenerator": "^2.3.2"
+    "dtsgenerator": "^2.3.2",
+    "np": "^5.2.1"
   },
   "dependencies": {
     "@types/express": "^4.17.2",
