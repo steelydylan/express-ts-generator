@@ -9,7 +9,7 @@
     "apigen": "node ./bin/index.js -s ./test/openapi.d.ts -d ./test/expressapi.ts",
     "gen": "npm run dtsgen && npm run apigen",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": ""
+    "deploy": "np --no-cleanup"
   },
   "types": "./api.ts",
   "bin": {
