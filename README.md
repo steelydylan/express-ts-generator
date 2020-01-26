@@ -17,19 +17,7 @@ $ npx dtsgen openapi/openapi.yaml -o ./src/@types/openapi.d.ts && npx apigen -s 
 
 ## Usage
 
-register types to tsconfig.json
-
-```json
-{
-  "compilerOptions": {
-    "types": [
-      "express-ts-generator"
-    ]
-  }
-}
-```
-
-use generated file
+in express controller...
 
 ```ts
 import { SomeController } from './types/api';
@@ -47,3 +35,7 @@ export const Get: SomeController.Get = async (
   // request and response will be typed automatically
 };
 ```
+
+## You can see how useful it is!!
+
+![](./screenshot.png)
